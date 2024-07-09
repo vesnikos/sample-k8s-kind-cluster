@@ -27,8 +27,10 @@ cluster: ## (re)create a test cluster with kind
 	@kubectl wait --namespace projectcontour  --for=condition=ready pod --selector=app=contour   --timeout=90s
 	@kubectl apply -f ./sample-service-httpbin.yaml
 	@echo "Cluster created and ready to use"
-	@echo "Access the sample httpbin service at: (wait for it rollout) "
+	@echo "Access the sample httpbin service at: (wait for it to rollout) "
+	@echo 
 	@echo http://httpbin-local.vescorp.eu/
+	@echo 
 
 clean: ## delete the test cluster
 	@kind delete cluster
