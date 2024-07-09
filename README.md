@@ -11,13 +11,13 @@ It's designed for L7 applications.
 
 ## Features?
 
-- Disposable.  
+- One command to (re)create the cluster. `make cluster`
+- Disposable.
 - Works on Windows, Linux and MacOS(maybe) 
 - Minimal interference with your computer. Nodes are containers. 
-- One command to (re)create the cluster. `make cluster`
 - Cluster is defined as code. Check the `kind-config.yaml` file. It defines 1 control plane and 1 worker node and ports to expose.
 - Nodes are accessible via `kubectl` commands.
-- Built-in sample app. After `make cluster` you can access the sample app via `http://httpbin-local.vescorp.eu' 
+- Built-in sample app. After `make cluster` is finished then http://httpbin-local.vescorp.eu 
 
 ## Demo
 
