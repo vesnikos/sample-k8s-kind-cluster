@@ -1,0 +1,16 @@
+kind: Kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
+resources:
+  # - https://github.com/projectcontour/contour/raw/main/
+  - https://github.com/projectcontour/contour/raw/main/examples/contour/00-common.yaml
+  - https://github.com/projectcontour/contour/raw/main/examples/contour/01-contour-config.yaml
+  - https://github.com/projectcontour/contour/raw/main/examples/contour/01-crds.yaml
+  - https://github.com/projectcontour/contour/raw/main/examples/contour/02-job-certgen.yaml
+  - https://github.com/projectcontour/contour/raw/main/examples/contour/02-rbac.yaml
+  - https://github.com/projectcontour/contour/raw/main/examples/contour/02-role-contour.yaml
+  - https://github.com/projectcontour/contour/raw/main/examples/contour/02-service-contour.yaml
+  # - https://github.com/projectcontour/contour/raw/main/examples/contour/02-service-envoy.yaml
+  - https://github.com/projectcontour/contour/raw/main/examples/contour/03-contour.yaml
+  - https://github.com/projectcontour/contour/raw/main/examples/contour/03-envoy.yaml
+patchesStrategicMerge:
+  - patch.yaml
