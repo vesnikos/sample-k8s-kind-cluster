@@ -5,7 +5,6 @@ SHELL := powershell.exe
 endif
 
 .PHONY: help clean pull-contour-files deploy-contour
-# DEFAULT_INGRESS_ACTION := deploy_contour
 
 DEFAULT_CLUSTER_STEPS := clean create-cluster deploy-contour deploy-sample-httpbin-app
 
@@ -17,7 +16,7 @@ else # not windows
 endif
 
 deploy-sample-httpbin-app: ## Deploy Sample Httpbin App
-	@kubectl apply -f deployments/httpbin/httpbin-stack.yaml 
+	@kubectl apply -f apps/httpbin/httpbin-stack.yaml 
 
 	@echo "App deployed. You can access it at"
 	@echo "(wait a bit for the app to start):"
